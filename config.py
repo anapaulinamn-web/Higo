@@ -1,20 +1,22 @@
 """
-Configuraciones globales y constantes del sistema HIGO.
+Configuraciones globales y constantes de diseño para HIGO.
 """
 import os
 
-# Rutas de archivos (Streamlit Cloud requiere /tmp para escritura)
+# Persistencia
 DB_PATH = "/tmp/higo_persistence.db"
 
-# Umbrales Sensoriales
-UMBRAL_RUIDO_ALTO = 75  # Decibelios estimados
-MAX_DENSIDAD_PERSONAS = 0.8  # 80% de capacidad
+# Umbrales Sensoriales de Marc (Default)
+UMBRAL_RUIDO_ALTO = 75 
+MAX_DENSIDAD_PERSONAS = 0.7 
 
-# Mensajes Literales (Evita ambigüedad)
-MSG_INCIDENCIA_GENERICA = "Retraso en la línea por causas técnicas."
-MSG_INSTRUCCION_HIGO = "No entres al andén. El ruido subirá. Camina hacia la salida B."
+# Microcopy de Producto (Evitar lenguaje genérico)
+LBL_CARGANDO = "Analizando entorno sensorial..."
+LBL_EXITO_RUTA = "Ruta despejada. Tienes el control."
+LBL_ALERTA_INCIDENCIA = "¡Atención! Cambio en el entorno detectado."
+LBL_ACCION_LITERAL = "Tu instrucción: Sal del metro ahora y usa la Ruta Espejo."
 
-# Colores de Interfaz (Accesibilidad)
-COLOR_SAFE = "#28A745"
-COLOR_WARNING = "#FFC107"
-COLOR_DANGER = "#DC3545"
+# Colores de Semáforo Sensorial
+COLOR_SAFE = "#D4EDDA"
+COLOR_WARNING = "#FFF3CD"
+COLOR_DANGER = "#F8D7DA"
