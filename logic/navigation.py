@@ -24,3 +24,9 @@ def obtener_instruccion_literal(es_seguro: bool, tramo: str) -> str:
     if es_seguro:
         return f"El tramo {tramo} es predecible. Puedes avanzar."
     return f"Imprevisto en {tramo}. Detente y sigue la ruta espejo."
+
+
+def translate_alert_to_literal(api_alert):
+    if "retraso" in api_alert.lower():
+        return "El tren tardará más. El andén se llenará de gente. Espera en la zona de bancos."
+    return "Todo normal. Sigue tu ruta."
